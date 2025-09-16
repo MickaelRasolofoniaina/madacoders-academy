@@ -596,3 +596,71 @@ header {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* Modern Contact Form Styles */
+.contact-form {
+  max-width: 420px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 1.2rem;
+  box-shadow: 0 8px 32px 0 rgba(38, 176, 224, 0.18),
+    0 1.5px 8px 0 rgba(50, 150, 238, 0.1);
+  backdrop-filter: blur(12px) saturate(1.2);
+  padding: 2rem 2rem 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  border: 1px solid rgba(50, 150, 238, 0.12);
+}
+.contact-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.contact-form label {
+  font-family: var(--main-font);
+  font-size: 1rem;
+  color: var(--white);
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+.contact-form input,
+.contact-form textarea {
+  font-family: var(--main-font);
+  font-size: 1rem;
+  padding: 0.7rem 1rem;
+  border-radius: 0.7rem;
+  border: 1px solid var(--color2);
+  background: var(--white);
+  color: var(--color3);
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 4px 0 rgba(38, 176, 224, 0.08);
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--color1);
+  box-shadow: 0 2px 8px 0 rgba(38, 176, 224, 0.18);
+}
+.contact-form textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+.contact-form button[type="submit"] {
+  font-family: var(--main-font);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--white);
+  background: linear-gradient(90deg, var(--color2) 0%, var(--color1) 100%);
+  border: none;
+  border-radius: 0.7rem;
+  padding: 0.9rem 0;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px 0 rgba(38, 176, 224, 0.12);
+  transition: background 0.2s, transform 0.2s;
+}
+.contact-form button[type="submit"]:hover {
+  background: linear-gradient(90deg, var(--color1) 0%, var(--color2) 100%);
+  transform: translateY(-2px) scale(1.03);
+}
