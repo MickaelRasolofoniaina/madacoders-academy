@@ -17,8 +17,8 @@
       <nav class="navbar">
         <div class="navbar-menu" id="navbarMenu">
           <a href="#">Accueil</a>
+          <a href="#formations" class="formation-link">Formation</a>
           <a href="#">A propos</a>
-          <a href="#">Formation</a>
           <a href="#">Contactez-nous</a>
         </div>
         <div
@@ -43,6 +43,32 @@
         </p>
       </div>
     </section>
+    <section class="formation-section" id="formations">
+      <h2 class="formation-title">Nos formations</h2>
+      <div class="columns">
+        <div class="card">
+          <h3>Formation Développement Web</h3>
+          <p>
+            Plongez dans le monde du développement web avec notre formation
+            complète. Apprenez les langages essentiels comme HTML, CSS,
+            JavaScript et maîtrisez les frameworks modernes pour créer des sites
+            et applications web performants et responsives. Nos cours sont
+            adaptés à tous les niveaux et vous accompagnent vers une carrière de
+            développeur web.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Formation Développement Mobile</h3>
+          <p>
+            Découvrez la création d'applications mobiles pour Android et iOS.
+            Notre formation vous guide à travers les bases du développement
+            mobile, l'utilisation de frameworks comme Flutter ou React Native,
+            et la publication sur les stores. Devenez un expert en conception
+            d'applications mobiles innovantes et multiplateformes.
+          </p>
+        </div>
+      </div>
+    </section>
     <main>
       <p>Your content goes here.</p>
     </main>
@@ -56,6 +82,18 @@
         if (e.key === "Enter" || e.key === " ") {
           menu.classList.toggle("active");
         }
+      });
+
+      // Smooth scroll for Formation link
+      document.querySelectorAll(".formation-link").forEach((link) => {
+        link.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.getElementById("formations");
+          if (target) {
+            target.scrollIntoView({ behavior: "smooth" });
+          }
+          menu.classList.remove("active");
+        });
       });
     </script>
     <footer>
