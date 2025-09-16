@@ -1,3 +1,27 @@
+/* About Section Styles */
+.about-section {
+  width: 100%;
+  background: #f8fafd;
+  padding: 3rem 1rem 2rem 1rem;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+.about-title {
+  text-align: center;
+  font-size: 2.2rem;
+  color: var(--color2);
+  font-family: var(--main-font);
+  margin-bottom: 1.5rem;
+}
+.about-text {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.15rem;
+  color: var(--color3);
+  font-family: var(--main-font);
+  line-height: 1.7;
+}
 /* Card scroll animation */
 .card {
   opacity: 1;
@@ -212,16 +236,26 @@ body {
 }
 
 /* Consistent heading styles */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1 {
   font-family: var(--main-font);
   font-weight: 700;
   color: var(--color3);
   margin-top: 0;
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.3rem;
+}
+
+p,
+.about-text,
+.card p {
+  font-size: 1rem;
 }
 
 /* Consistent paragraph style */
