@@ -423,3 +423,104 @@ header {
     display: flex;
   }
 }
+
+.faq-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.2rem;
+  font-family: var(--main-font);
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s;
+  opacity: 0.7;
+  transform: scale(1);
+}
+
+/* FAQ Section Styles */
+.faq-section {
+  width: 100%;
+  background: #fff;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  box-sizing: border-box;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.faq-list {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.faq-item {
+  background: #f8fafd;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(50, 150, 238, 0.07);
+  padding: 0.5rem 1.5rem;
+  border: 1px solid var(--color1);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  transition: box-shadow 0.3s, border-color 0.3s, background 0.3s;
+}
+.faq-item:hover {
+  box-shadow: 0 8px 24px rgba(38, 176, 224, 0.15);
+  border-color: var(--color2);
+  background: #eaf6fb;
+}
+.faq-question {
+  font-size: 1.15rem;
+  color: var(--color3);
+  font-family: var(--main-font);
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 1rem 0;
+  cursor: pointer;
+  outline: none;
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.faq-arrow {
+  display: inline-block;
+  margin-left: 1rem;
+  width: 1.2em;
+  height: 1.2em;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 1.2em;
+  pointer-events: none;
+  position: relative;
+}
+.faq-arrow::before {
+  content: "\25BC";
+  display: block;
+  color: var(--color2);
+  font-size: 1.2em;
+  line-height: 1;
+}
+.faq-item.expanded .faq-arrow {
+  transform: rotate(-180deg);
+}
+.faq-question:focus,
+.faq-question:hover {
+  color: var(--color2);
+}
+.faq-answer {
+  font-size: 1rem;
+  color: #333;
+  font-family: var(--main-font);
+  margin: 0;
+  padding: 0.5rem 0 1rem 0;
+  border-top: 1px solid #e0e7ef;
+  transition: max-height 0.3s, opacity 0.3s;
+  opacity: 1;
+}
+.faq-answer[hidden] {
+  display: none;
+  opacity: 0;
+}

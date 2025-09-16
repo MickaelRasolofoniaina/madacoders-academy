@@ -19,6 +19,7 @@
           <a href="#">Accueil</a>
           <a href="#about" class="about-link">A propos</a>
           <a href="#formations" class="formation-link">Formations</a>
+          <a href="#faq" class="faq-link">Faq</a>
           <a href="#">Contactez-nous</a>
         </div>
         <div
@@ -33,112 +34,158 @@
         </div>
       </nav>
     </header>
-    <section class="hero-banner">
-      <div class="hero-content">
-        <h2>Bienvenue sur Madacoders Academy</h2>
-        <p>
-          Découvrez Madacoders Academy, votre formation complète pour le
-          développement web et mobile. Apprenez à coder, créez des applications
-          modernes, et rejoignez une communauté passionnée de développeurs !
-        </p>
-      </div>
-    </section>
-    <section class="about-section" id="about">
-      <!-- Animated background icons -->
-      <div class="about-bg-icons">
-        <span class="about-bg-icon" id="icon-html">
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-            <rect width="32" height="32" rx="8" fill="#e34c26" />
-            <text
-              x="16"
-              y="22"
-              text-anchor="middle"
-              font-size="16"
-              fill="#fff"
-              font-family="League Spartan, Arial"
-            >
-              &lt;/&gt;
-            </text>
-          </svg>
-        </span>
-        <span class="about-bg-icon" id="icon-css">
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-            <rect width="32" height="32" rx="8" fill="#2965f1" />
-            <text
-              x="16"
-              y="22"
-              text-anchor="middle"
-              font-size="16"
-              fill="#fff"
-              font-family="League Spartan, Arial"
-            >
-              CSS
-            </text>
-          </svg>
-        </span>
-        <span class="about-bg-icon" id="icon-js">
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-            <rect width="32" height="32" rx="8" fill="#f7df1e" />
-            <text
-              x="16"
-              y="22"
-              text-anchor="middle"
-              font-size="16"
-              fill="#222"
-              font-family="League Spartan, Arial"
-            >
-              JS
-            </text>
-          </svg>
-        </span>
-        <span class="about-bg-icon" id="icon-mobile">
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-            <rect width="32" height="32" rx="8" fill="#26b0e0" />
-            <rect x="10" y="8" width="12" height="16" rx="2" fill="#fff" />
-            <rect x="15" y="22" width="2" height="2" rx="1" fill="#26b0e0" />
-          </svg>
-        </span>
-      </div>
-      <h2 class="about-title">A propos</h2>
-      <p class="about-text">
-        Madacoders Academy est une initiative dédiée à la formation des
-        développeurs de demain. Nous croyons que l'apprentissage du code doit
-        être accessible, pratique et motivant. Notre équipe de formateurs
-        passionnés accompagne chaque apprenant dans la découverte des
-        technologies web et mobiles, en favorisant la créativité, l'autonomie et
-        la réussite professionnelle. Rejoignez-nous pour transformer votre
-        passion en compétences et bâtir votre avenir numérique !
-      </p>
-    </section>
-    <section class="formation-section" id="formations">
-      <h2 class="formation-title" id="formationTitle">Nos formations</h2>
-      <div class="columns">
-        <div class="card">
-          <div class="card-icon web-icon"></div>
-          <h3 class="card-title">Formation Développement Web</h3>
-          <p>
-            Plongez dans le monde du développement web avec notre formation
-            complète. Apprenez les langages essentiels comme HTML, CSS,
-            JavaScript et maîtrisez les frameworks modernes pour créer des sites
-            et applications web performants et responsives. Nos cours sont
-            adaptés à tous les niveaux et vous accompagnent vers une carrière de
-            développeur web.
-          </p>
-        </div>
-        <div class="card">
-          <div class="card-icon mobile-icon"></div>
-          <h3 class="card-title">Formation Développement Mobile</h3>
-          <p>
-            Découvrez la création d'applications mobiles pour Android et iOS.
-            Notre formation vous guide à travers les bases du développement
-            mobile, l'utilisation de frameworks comme Flutter ou React Native,
-            et la publication sur les stores. Devenez un expert en conception
-            d'applications mobiles innovantes et multiplateformes.
-          </p>
-        </div>
-      </div>
-    </section>
     <main>
+      <section class="hero-banner">
+        <div class="hero-content">
+          <h2>Bienvenue sur Madacoders Academy</h2>
+          <p>
+            Découvrez Madacoders Academy, votre formation complète pour le
+            développement web et mobile. Apprenez à coder, créez des
+            applications modernes, et rejoignez une communauté passionnée de
+            développeurs !
+          </p>
+        </div>
+      </section>
+      <section class="about-section" id="about">
+        <!-- Animated background icons -->
+        <div class="about-bg-icons">
+          <span class="about-bg-icon" id="icon-html">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+              <rect width="32" height="32" rx="8" fill="#e34c26" />
+              <text
+                x="16"
+                y="22"
+                text-anchor="middle"
+                font-size="16"
+                fill="#fff"
+                font-family="League Spartan, Arial"
+              >
+                &lt;/&gt;
+              </text>
+            </svg>
+          </span>
+          <span class="about-bg-icon" id="icon-css">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+              <rect width="32" height="32" rx="8" fill="#2965f1" />
+              <text
+                x="16"
+                y="22"
+                text-anchor="middle"
+                font-size="16"
+                fill="#fff"
+                font-family="League Spartan, Arial"
+              >
+                CSS
+              </text>
+            </svg>
+          </span>
+          <span class="about-bg-icon" id="icon-js">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+              <rect width="32" height="32" rx="8" fill="#f7df1e" />
+              <text
+                x="16"
+                y="22"
+                text-anchor="middle"
+                font-size="16"
+                fill="#222"
+                font-family="League Spartan, Arial"
+              >
+                JS
+              </text>
+            </svg>
+          </span>
+          <span class="about-bg-icon" id="icon-mobile">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+              <rect width="32" height="32" rx="8" fill="#26b0e0" />
+              <rect x="10" y="8" width="12" height="16" rx="2" fill="#fff" />
+              <rect x="15" y="22" width="2" height="2" rx="1" fill="#26b0e0" />
+            </svg>
+          </span>
+        </div>
+        <h2 class="about-title">A propos</h2>
+        <p class="about-text">
+          Madacoders Academy est une initiative dédiée à la formation des
+          développeurs de demain. Nous croyons que l'apprentissage du code doit
+          être accessible, pratique et motivant. Notre équipe de formateurs
+          passionnés accompagne chaque apprenant dans la découverte des
+          technologies web et mobiles, en favorisant la créativité, l'autonomie
+          et la réussite professionnelle. Rejoignez-nous pour transformer votre
+          passion en compétences et bâtir votre avenir numérique !
+        </p>
+      </section>
+      <section class="formation-section" id="formations">
+        <h2 class="formation-title" id="formationTitle">Nos formations</h2>
+        <div class="columns">
+          <div class="card">
+            <div class="card-icon web-icon"></div>
+            <h3 class="card-title">Formation Développement Web</h3>
+            <p>
+              Plongez dans le monde du développement web avec notre formation
+              complète. Apprenez les langages essentiels comme HTML, CSS,
+              JavaScript et maîtrisez les frameworks modernes pour créer des
+              sites et applications web performants et responsives. Nos cours
+              sont adaptés à tous les niveaux et vous accompagnent vers une
+              carrière de développeur web.
+            </p>
+          </div>
+          <div class="card">
+            <div class="card-icon mobile-icon"></div>
+            <h3 class="card-title">Formation Développement Mobile</h3>
+            <p>
+              Découvrez la création d'applications mobiles pour Android et iOS.
+              Notre formation vous guide à travers les bases du développement
+              mobile, l'utilisation de frameworks comme Flutter ou React Native,
+              et la publication sur les stores. Devenez un expert en conception
+              d'applications mobiles innovantes et multiplateformes.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="faq-section" id="faq">
+        <h2 class="faq-title">FAQ</h2>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              Quels sont les prérequis pour s'inscrire ?
+              <span class="faq-arrow" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer" hidden>
+              Aucun prérequis technique n'est nécessaire. La motivation et la
+              curiosité suffisent !
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              Les formations sont-elles accessibles en ligne ?
+              <span class="faq-arrow" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer" hidden>
+              Oui, toutes nos formations sont disponibles en ligne et
+              accessibles à tout moment.
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              Y a-t-il un accompagnement personnalisé ?
+              <span class="faq-arrow" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer" hidden>
+              Nos formateurs vous accompagnent tout au long de votre
+              apprentissage avec des sessions de coaching et de suivi.
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              Un certificat est-il délivré à la fin ?
+              <span class="faq-arrow" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer" hidden>
+              Oui, un certificat de réussite est délivré à la fin de chaque
+              formation.
+            </div>
+          </div>
+        </div>
+      </section>
       <p>Your content goes here.</p>
     </main>
     <script src="main.js"></script>

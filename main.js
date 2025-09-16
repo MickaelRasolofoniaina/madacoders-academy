@@ -33,6 +33,35 @@ document.querySelectorAll(".formation-link").forEach((link) => {
   });
 });
 
+// Smooth scroll for FAQ link
+document.querySelectorAll(".faq-link").forEach((link) => {
+  link.addEventListener("click", function (e) {
+    e.preventDefault();
+    const target = document.getElementById("faq");
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth" });
+    }
+    menu.classList.remove("active");
+  });
+});
+
+// FAQ accordion logic
+document.querySelectorAll(".faq-question").forEach((btn) => {
+  btn.addEventListener("click", function () {
+    const answer = this.nextElementSibling;
+    if (!answer) return;
+    const isOpen = !answer.hasAttribute("hidden");
+    // Close all answers
+    document
+      .querySelectorAll(".faq-answer")
+      .forEach((a) => a.setAttribute("hidden", ""));
+    // Open if was closed
+    if (!isOpen) {
+      answer.removeAttribute("hidden");
+    }
+  });
+});
+
 // Scale effect on Nos formations title when in viewport
 const formationTitle = document.getElementById("formationTitle");
 function handleTitleScale() {
