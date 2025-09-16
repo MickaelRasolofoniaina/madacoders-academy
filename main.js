@@ -45,6 +45,18 @@ document.querySelectorAll(".faq-link").forEach((link) => {
   });
 });
 
+// Smooth scroll for Contactez-nous link
+document.querySelectorAll(".contact-link").forEach((link) => {
+  link.addEventListener("click", function (e) {
+    e.preventDefault();
+    const target = document.getElementById("contact");
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth" });
+    }
+    menu.classList.remove("active");
+  });
+});
+
 // FAQ accordion logic
 document.querySelectorAll(".faq-question").forEach((btn) => {
   btn.addEventListener("click", function () {
@@ -98,3 +110,19 @@ function handleTitleScale() {
 window.addEventListener("scroll", handleTitleScale);
 window.addEventListener("resize", handleTitleScale);
 document.addEventListener("DOMContentLoaded", handleTitleScale);
+
+// Contact title scroll-in animation
+const contactTitle = document.querySelector(".contact-title");
+function animateContactTitle() {
+  if (!contactTitle) return;
+  const rect = contactTitle.getBoundingClientRect();
+  const inView = rect.top < window.innerHeight - 40 && rect.bottom > 0;
+  if (inView) {
+    contactTitle.classList.add("visible");
+  } else {
+    contactTitle.classList.remove("visible");
+  }
+}
+window.addEventListener("scroll", animateContactTitle);
+window.addEventListener("resize", animateContactTitle);
+document.addEventListener("DOMContentLoaded", animateContactTitle);
