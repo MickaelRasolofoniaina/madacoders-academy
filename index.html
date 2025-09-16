@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Madacoders Academy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="navbar-menu" id="navbarMenu">
+          <a href="#">Accueil</a>
+          <a href="#">A propos</a>
+          <a href="#">Formation</a>
+          <a href="#">Contactez-nous</a>
+        </div>
+        <div
+          class="hamburger"
+          id="hamburgerMenu"
+          aria-label="Open menu"
+          tabindex="0"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </header>
+    <section class="hero-banner">
+      <div class="hero-content">
+        <h2>Bienvenue sur Madacoders Academy</h2>
+        <p>
+          Découvrez Madacoders Academy, votre formation complète pour le
+          développement web et mobile. Apprenez à coder, créez des applications
+          modernes, et rejoignez une communauté passionnée de développeurs !
+        </p>
+      </div>
+    </section>
+    <main>
+      <p>Your content goes here.</p>
+    </main>
+    <script>
+      const hamburger = document.getElementById("hamburgerMenu");
+      const menu = document.getElementById("navbarMenu");
+      hamburger.addEventListener("click", () => {
+        menu.classList.toggle("active");
+      });
+      hamburger.addEventListener("keypress", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          menu.classList.toggle("active");
+        }
+      });
+    </script>
+    <footer>
+      <p>&copy; 2025 Madacoders Academy</p>
+    </footer>
+  </body>
+</html>
