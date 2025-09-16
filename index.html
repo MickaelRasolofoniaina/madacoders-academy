@@ -44,10 +44,11 @@
       </div>
     </section>
     <section class="formation-section" id="formations">
-      <h2 class="formation-title">Nos formations</h2>
+      <h2 class="formation-title" id="formationTitle">Nos formations</h2>
       <div class="columns">
         <div class="card">
-          <h3>Formation Développement Web</h3>
+          <div class="card-icon web-icon"></div>
+          <h3 class="card-title">Formation Développement Web</h3>
           <p>
             Plongez dans le monde du développement web avec notre formation
             complète. Apprenez les langages essentiels comme HTML, CSS,
@@ -58,7 +59,8 @@
           </p>
         </div>
         <div class="card">
-          <h3>Formation Développement Mobile</h3>
+          <div class="card-icon mobile-icon"></div>
+          <h3 class="card-title">Formation Développement Mobile</h3>
           <p>
             Découvrez la création d'applications mobiles pour Android et iOS.
             Notre formation vous guide à travers les bases du développement
@@ -72,30 +74,7 @@
     <main>
       <p>Your content goes here.</p>
     </main>
-    <script>
-      const hamburger = document.getElementById("hamburgerMenu");
-      const menu = document.getElementById("navbarMenu");
-      hamburger.addEventListener("click", () => {
-        menu.classList.toggle("active");
-      });
-      hamburger.addEventListener("keypress", (e) => {
-        if (e.key === "Enter" || e.key === " ") {
-          menu.classList.toggle("active");
-        }
-      });
-
-      // Smooth scroll for Formation link
-      document.querySelectorAll(".formation-link").forEach((link) => {
-        link.addEventListener("click", function (e) {
-          e.preventDefault();
-          const target = document.getElementById("formations");
-          if (target) {
-            target.scrollIntoView({ behavior: "smooth" });
-          }
-          menu.classList.remove("active");
-        });
-      });
-    </script>
+    <script src="main.js"></script>
     <footer>
       <p>&copy; 2025 Madacoders Academy</p>
     </footer>

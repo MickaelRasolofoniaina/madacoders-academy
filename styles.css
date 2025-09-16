@@ -1,3 +1,54 @@
+/* Card scroll animation */
+.card {
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+.card.visible {
+  /* No effect needed, class removed */
+}
+/* Card icon and title centering */
+.card-title {
+  text-align: center;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.card-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 0.5rem auto;
+  font-size: 2.5rem;
+}
+
+.web-icon::before {
+  content: "\1F4BB"; /* 💻 Unicode for laptop */
+  font-family: "Segoe UI Emoji", "Noto Color Emoji", "Apple Color Emoji", sans-serif;
+}
+
+.mobile-icon::before {
+  content: "\1F4F1"; /* 📱 Unicode for mobile phone */
+  font-family: "Segoe UI Emoji", "Noto Color Emoji", "Apple Color Emoji", sans-serif;
+}
+/* Center and scale effect for formation title */
+.formation-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.2rem;
+  font-family: var(--main-font);
+  color: var(--color2);
+  transition: transform 0.5s cubic-bezier(0.4,0,0.2,1), opacity 0.5s;
+  opacity: 0.7;
+  transform: scale(1);
+}
+
+.formation-title.scale-in {
+  opacity: 1;
+  transform: scale(1.12);
+}
 /* Formation Section Styles */
 .formation-section {
   width: 100%;
@@ -27,7 +78,11 @@
 }
 
 .card:hover {
-  box-shadow: 0 8px 32px 0 rgba(38,176,224,0.18);
+  box-shadow: 0 12px 40px 0 rgba(38,176,224,0.25);
+  border-color: var(--color2);
+  transform: scale(1.04);
+  transition: box-shadow 0.3s, border-color 0.3s, transform 0.3s;
+  cursor: pointer;
 }
 
 .card h3 {
@@ -41,6 +96,7 @@
   font-size: 1rem;
   color: var(--color3);
   font-family: var(--main-font);
+  text-align: center;
 }
 
 @media (max-width: 900px) {
