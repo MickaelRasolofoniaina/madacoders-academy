@@ -67,6 +67,22 @@ document.querySelectorAll(".faq-question").forEach((btn) => {
   });
 });
 
+// FAQ scroll-in animation
+function animateFaqItems() {
+  const faqItems = document.querySelectorAll(".faq-item");
+  faqItems.forEach((item, idx) => {
+    const rect = item.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 40 && rect.bottom > 0) {
+      item.classList.add("visible");
+    } else {
+      item.classList.remove("visible");
+    }
+  });
+}
+window.addEventListener("scroll", animateFaqItems);
+window.addEventListener("resize", animateFaqItems);
+document.addEventListener("DOMContentLoaded", animateFaqItems);
+
 // Scale effect on Nos formations title when in viewport
 const formationTitle = document.getElementById("formationTitle");
 function handleTitleScale() {
