@@ -10,14 +10,69 @@ document.querySelectorAll(".about-link").forEach((link) => {
   });
 });
 // Navigation hamburger menu
+
 const hamburger = document.getElementById("hamburgerMenu");
 const menu = document.getElementById("navbarMenu");
+
+function animateMenuHeight(open) {
+  if (!menu) return;
+  // Only animate on mobile (max-width: 900px)
+  if (window.innerWidth > 900) {
+    menu.style.height = "";
+    menu.style.overflow = "";
+    menu.style.transition = "";
+    return;
+  }
+  menu.style.overflow = "hidden";
+  menu.style.transition = ""; // Reset transition before starting
+
+  if (open) {
+    menu.classList.add("active");
+    const targetHeight = menu.scrollHeight;
+    menu.style.height = "0px";
+    // Force reflow for transition
+    void menu.offsetWidth;
+    menu.style.transition = "height 0.35s cubic-bezier(0.4,0,0.2,1)";
+    menu.style.height = targetHeight + "px";
+    setTimeout(() => {
+      menu.style.height = "auto";
+      menu.style.overflow = "visible";
+      menu.style.transition = ""; // Clear transition after animation
+    }, 370);
+  } else {
+    const currentHeight = menu.scrollHeight;
+    menu.style.height = currentHeight + "px";
+    // Force reflow for transition
+    void menu.offsetWidth;
+    menu.style.transition = "height 0.35s cubic-bezier(0.4,0,0.2,1)";
+    menu.style.height = "0px";
+    setTimeout(() => {
+      menu.classList.remove("active");
+      menu.style.height = "";
+      menu.style.overflow = "";
+      menu.style.transition = ""; // Clear transition after animation
+    }, 370);
+  }
+}
+
 hamburger.addEventListener("click", () => {
-  menu.classList.toggle("active");
+  const isOpen = !menu.classList.contains("active");
+  animateMenuHeight(isOpen);
 });
 hamburger.addEventListener("keypress", (e) => {
   if (e.key === "Enter" || e.key === " ") {
-    menu.classList.toggle("active");
+    const isOpen = !menu.classList.contains("active");
+    animateMenuHeight(isOpen);
+  }
+});
+
+// Reset menu height on resize (for desktop/mobile switch)
+window.addEventListener("resize", () => {
+  if (window.innerWidth > 900) {
+    menu.style.height = "";
+    menu.style.overflow = "";
+    menu.style.transition = "";
+    menu.classList.remove("active");
   }
 });
 
